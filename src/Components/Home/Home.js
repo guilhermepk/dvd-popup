@@ -13,8 +13,12 @@ const Home = () => {
     const [theme, setTheme] = useState(null);
     const [themeNumber, setThemeNumber] = useState(1);
     const [changeTheme, setChangeTheme] = useState(false);
+    const [speed, setSpeed] = useState(0.005);
     const contentRef = useRef(null);
-    const speed = 0.005;
+
+    const speedUp = () => {
+        setSpeed(prev => prev*2);
+    }
 
     useEffect(() => {
         if(!theme){
@@ -24,6 +28,7 @@ const Home = () => {
 
     useEffect(() => {
         if(changeTheme){
+            speedUp();
             switch(themeNumber){
                 case 3:
                     setThemeNumber(1);
