@@ -1,0 +1,16 @@
+.main-content {
+    background: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    margin: 0;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: fit-content;
+}
